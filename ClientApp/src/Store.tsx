@@ -20,6 +20,11 @@ function reducer(state: IState, action: IAction): IState
 {
   switch (action.type)
   {
+    case "units":
+      return state;
+
+    case "calls":
+      return state;
 
     case "save_map":
       return {

@@ -1,9 +1,9 @@
-﻿import React from 'react';
+﻿import React, { useContext, useEffect } from 'react';
 import { Store } from './Store';
 
 const Nav = () =>
 {
-  const { state, dispatch } = React.useContext(Store);
+  const { state, dispatch } = useContext(Store);
 
   const closeBaseMapDropdown = () =>
   {

@@ -26,7 +26,7 @@ namespace Minicad2Core.Models
       while (!stoppingToken.IsCancellationRequested)
       {
         _logger.LogInformation("Worker running at: {Time}", DateTime.Now);
-        await _callHub.Clients.All.SendMessage(DateTime.Now.ToString());
+        await _callHub.Clients.All.Calls(new List<Call>());
         await Task.Delay(1000);
       }
     }
